@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--系统提供两种layout_behavior，appbar_scrolling_view_behavior和bottom_sheet_behavior-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="#dbdbdb"/>
+
+    <!--最底部的浮窗-->
+    <TextView
+        android:id="@+id/tv_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_above="@+id/line"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="滑动后展开的部分2"/>
+
+    <!--用一个ScrollView包住需要滚动的区域，NestedScrollView和支持嵌套滚动-->
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_bottom">
+
+        <!--ScrollView只能有一个子View-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--内容区域-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:background="@android:color/holo_blue_bright"
+                android:gravity="center"
+                android:text="滑动后展开的部分1"/>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>
