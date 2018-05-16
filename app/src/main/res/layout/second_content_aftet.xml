@@ -7,19 +7,12 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <View
-        android:id="@+id/line"
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:layout_alignParentBottom="true"
-        android:background="#dbdbdb"/>
-
     <!--最底部的浮窗-->
     <TextView
         android:id="@+id/tv_bottom"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_above="@+id/line"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
         android:background="@color/colorPrimary"
         android:gravity="center"
         android:text="滑动后展开的部分2"/>
@@ -37,7 +30,7 @@
             <!--内容区域-->
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="600dp"
+                android:layout_height="800dp"
                 android:background="@android:color/holo_blue_bright"
                 android:gravity="center"
                 android:text="滑动后展开的部分1"/>
